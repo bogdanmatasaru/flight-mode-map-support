@@ -3,32 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Mode Map - Support</title>
+    <title>Flight Mode Map - In-Flight Navigation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Flight Mode Map Support</h1>
-        <p>We’re here to help you get the most out of your in-flight experience with our app.</p>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Flight Mode Map</h1>
+            </div>
+            <ul>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>Frequently Asked Questions</h2>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Take Control of Your In-Flight Navigation</h1>
+            <p>The ultimate app to track your flight in real-time, even in Airplane Mode. Track altitude, speed, and much more!</p>
+            <a href="download.html" class="btn">Download Now</a>
+        </div>
+        <div class="airplane">
+            <img src="airplane.png" alt="Flying Airplane">
+        </div>
+    </section>
 
-        <h3>How do I cache the map for offline use?</h3>
-        <p>Before your flight, open the map in the app, zoom in and out, and scroll over your route to cache the map data. Once cached, the map will work offline while in Airplane Mode.</p>
-
-        <h3>Why isn’t the GPS signal working?</h3>
-        <p>GPS signals can be weak inside an aircraft. For best results, sit near a window and allow up to 60 seconds for the signal to lock on.</p>
-
-        <h3>Can I use Flight Mode Map without an internet connection?</h3>
-        <p>Yes! The app works entirely offline after caching the map data before takeoff. Make sure to complete this step while connected to the internet.</p>
-
-        <h3>Need More Help?</h3>
-        <p>If you have any other questions or need further assistance, feel free to reach out to us.</p>
-        <p>Email: <a href="mailto:support@flightmodemap.com">support@flightmodemap.com</a></p>
-    </div>
+    <section id="features">
+        <h2>Why Flight Mode Map?</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <h3>Real-Time Flight Data</h3>
+                <p>Track your altitude, speed, and exact location on a moving map in real-time, without internet.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Offline Map Caching</h3>
+                <p>Pre-load your map before flying and access it throughout your journey, even in Airplane Mode.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Auto-Update Position</h3>
+                <p>Your location is automatically updated as you fly, keeping you informed at all times.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Flight Mode Map. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Simple GSAP animation for airplane movement
+        gsap.to(".airplane img", { y: 20, repeat: -1, yoyo: true, duration: 2, ease: "power1.inOut" });
+    </script>
 </body>
 </html>
