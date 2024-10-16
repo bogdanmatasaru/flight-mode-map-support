@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    height: 100vh;
 }
 
 header {
@@ -35,23 +36,21 @@ nav ul li a {
 }
 
 #hero {
-    background-image: url('sky-background.jpg');
-    background-size: cover;
-    height: 90vh;
+    background-color: #f4f4f4;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-
-.hero-content {
+    flex-direction: column;
     text-align: center;
-    color: white;
+    padding: 50px 20px; /* Increased padding */
+    position: relative;
 }
 
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    color: #2c3e50;
 }
 
 .hero-content p {
@@ -74,32 +73,33 @@ nav ul li a {
 
 .airplane img {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 300px;
+    bottom: 20px;
+    right: 30px;
+    width: 150px; /* Reduced airplane size */
+    animation: fly 5s ease-in-out infinite;
 }
 
-footer {
-    background-color: #34495e;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
+/* Airplane Animation */
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.features-section,
-.support-section,
-.about-section,
-.download-section {
+#features {
     padding: 50px 20px;
-    text-align: center;
+    text-align: left;
 }
 
-.features-section h1,
-.support-section h1,
-.about-section h1,
-.download-section h1 {
+#features h2 {
     font-size: 2.5em;
+    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -107,7 +107,18 @@ footer {
     margin: 30px 0;
 }
 
-.feature-item h2 {
-    font-size: 2em;
+.feature-item h3 {
+    font-size: 1.8em;
     margin-bottom: 10px;
+    color: #34495e;
+}
+
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
